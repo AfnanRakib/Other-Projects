@@ -1,2 +1,2 @@
 # Other-Projects
-All small practice projects are here
+Some small practice projects
