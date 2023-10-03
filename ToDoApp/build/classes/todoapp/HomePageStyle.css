@@ -1,0 +1,25 @@
+
+.details-layout{
+    -fx-background-image:url('front.jpg');
+    -fx-background-size:cover;
+}
+.button{
+    -fx-background-color:#EBC95E;
+    -fx-background-radius:0 50 50 50;
+}
+.text{
+    -fx-background-color:#abdbe3;
+}
+.list{
+    -fx-font-size: 23;
+    -fx-font-family: "Lucida Console";
+}
+.list-cell:odd{
+    -fx-background-color:#f5edba;
+}
+.list-cell:even{
+    -fx-background-color:#f5d292;
+}
+.list-cell:selected{
+    -fx-background-color:#154c79;
+}

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1000.0" styleClass="background-layout" stylesheets="@HomePageStyle.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="todoapp.HomePageController">
+   <children>
+      <Pane layoutX="-3.0" layoutY="-12.0" prefHeight="765.0" prefWidth="1015.0" styleClass="background-layout" stylesheets="@HomePageStyle.css">
+         <children>
+            <Pane layoutY="10.0" prefHeight="756.0" prefWidth="201.0" styleClass="details-layout" stylesheets="@HomePageStyle.css">
+               <children>
+                  <Button fx:id="newBtn" layoutX="41.0" layoutY="492.0" mnemonicParsing="false" onMouseClicked="#addEvent" prefHeight="65.0" prefWidth="111.0" stylesheets="@HomePageStyle.css" text="NEW">
+                     <font>
+                        <Font name="Chalkboard" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="editBtn" layoutX="43.0" layoutY="573.0" mnemonicParsing="false" onMouseClicked="#editEvent" prefHeight="65.0" prefWidth="111.0" stylesheets="@HomePageStyle.css" text="EDIT">
+                     <font>
+                        <Font name="Chalkboard" size="21.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="deleteBtn" layoutX="42.0" layoutY="651.0" mnemonicParsing="false" onMouseClicked="#deleteEvent" prefHeight="65.0" prefWidth="111.0" stylesheets="@HomePageStyle.css" text="DELETE">
+                     <font>
+                        <Font name="Chalkboard" size="20.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="eventName" layoutX="10.0" layoutY="174.0" prefHeight="49.0" prefWidth="184.0" promptText="Event Name" stylesheets="@HomePageStyle.css">
+                     <font>
+                        <Font name="Chalkboard" size="16.0" />
+                     </font></TextField>
+                  <TextArea fx:id="eventDescription" layoutX="9.0" layoutY="236.0" prefHeight="237.0" prefWidth="186.0" promptText="Event Description" stylesheets="@HomePageStyle.css" wrapText="true">
+                     <font>
+                        <Font name="Chalkboard" size="16.0" />
+                     </font></TextArea>
+                  <DatePicker fx:id="eventDate" layoutX="12.0" layoutY="118.0" prefHeight="42.0" prefWidth="181.0" promptText="Event Date" stylesheets="@HomePageStyle.css" />
+                  <RadioButton fx:id="today" layoutX="40.0" layoutY="23.0" mnemonicParsing="false" onAction="#todaysEvent" prefHeight="34.0" prefWidth="123.0" style="-fx-background-color: #EBC95E; -fx-background-radius: 50 50 50 50; -fx-font-size: 18;" stylesheets="@HomePageStyle.css" text="Today">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="eventShow" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="all" layoutX="40.0" layoutY="70.0" mnemonicParsing="false" onAction="#allEvent" prefHeight="34.0" prefWidth="123.0" style="-fx-background-color: #EBC95E; -fx-background-radius: 50 50 50 50; -fx-font-size: 18;" stylesheets="@HomePageStyle.css" text="All" toggleGroup="$eventShow" />
+               </children>
+            </Pane>
+            <ScrollPane hbarPolicy="ALWAYS" hmin="50.0" layoutX="201.0" layoutY="76.0" prefHeight="690.0" prefWidth="816.0" vbarPolicy="ALWAYS">
+               <content>
+                  <ListView fx:id="eventList" fixedCellSize="50.0" prefHeight="674.0" prefWidth="800.0" style="-fx-background-color: #154c79;" styleClass="list" stylesheets="@HomePageStyle.css" />
+               </content>
+            </ScrollPane>
+            <Label alignment="CENTER" layoutX="201.0" layoutY="7.0" prefHeight="69.0" prefWidth="816.0" styleClass="text" stylesheets="@HomePageStyle.css" text="My Events" textAlignment="CENTER" textFill="#32322c">
+               <font>
+                  <Font name="Apple Symbols" size="39.0" />
+               </font>
+            </Label>
+         </children></Pane>
+   </children>
+</AnchorPane>

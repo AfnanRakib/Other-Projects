@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane dividerPositions="0.5" orientation="VERTICAL" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="todoapp.GuiController">
+   <items>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="805.0">
+         <children>
+            <Button fx:id="addButton" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#addEvent" prefHeight="33.0" prefWidth="77.0" text="Add Event" />
+            <DatePicker fx:id="datePicker" layoutX="111.0" layoutY="13.0" prefHeight="33.0" prefWidth="157.0" promptText="Select Date" />
+            <TextField fx:id="workDescription" layoutX="290.0" layoutY="13.0" prefHeight="33.0" prefWidth="494.0" promptText="Add your works..." />
+            <Separator layoutX="98.0" orientation="VERTICAL" prefHeight="58.0" prefWidth="4.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="98.0" AnchorPane.topAnchor="0.0" />
+            <Separator layoutX="277.0" orientation="VERTICAL" prefHeight="58.0" prefWidth="6.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="277.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <ListView fx:id="workList" prefHeight="200.0" prefWidth="200.0" />
+   </items>
+</SplitPane>
